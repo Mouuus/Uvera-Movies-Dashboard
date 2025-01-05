@@ -1,0 +1,13 @@
+@media screen and (max-width: 900px) {
+  p {
+    width: 100% !important;
+  }
+  button{
+    padding: unset !important;
+    padding: 0.5em !important;
+  }
+
+  .btns{
+    display: flex;
+  }
+}

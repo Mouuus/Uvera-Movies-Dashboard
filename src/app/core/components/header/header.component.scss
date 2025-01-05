@@ -1,3 +1,91 @@
-.header-font{
-    font-family: sans-serif;
+/* General Styles */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+  background-color: #33333360;
+  color: white;
+  font-family: monospace;
+}
+
+.logo {
+  img {
+    width: 10em;
+    height: auto;
+  }
+}
+
+/* Navigation Styles */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.nav-list a:hover {
+  color: blueviolet;
+}
+
+/* Hide checkbox */
+.menu-toggle {
+  display: none;
+}
+
+/* Hamburger Menu */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    border: 1px solid #444;
+    z-index: 10;
+  }
+
+  .menu-toggle:checked + .menu-icon + .nav {
+    display: flex;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    text-align: right;
+    padding: 0;
+  }
+
+  .nav-list li {
+    margin: 10px 0;
+  }
+
+  .menu-icon {
+    display: block;
+  }
 }
