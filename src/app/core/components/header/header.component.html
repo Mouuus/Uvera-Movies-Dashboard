@@ -1,16 +1,15 @@
+
+
 <header class="header">
   <div class="logo">
-    <img src="../../../../assets/pngwing.com.png" alt="uvera" />
+    <img src="../../../../assets/pngwing.com.png" alt="uvera">
   </div>
-  <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
   <label for="menu-toggle" class="menu-icon">&#9776;</label>
   <nav class="nav">
     <ul class="nav-list">
-      @for (nav of navList; track $index) {
-      <li>
-        <a>{{ nav }}</a>
-      </li>
-      }
+      <li *ngFor="let item of navList" ><a>{{item}}</a></li>
+      
     </ul>
   </nav>
 </header>
